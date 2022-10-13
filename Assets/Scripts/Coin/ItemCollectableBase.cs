@@ -5,7 +5,6 @@ using UnityEngine;
 public class ItemCollectableBase : MonoBehaviour
 {
     public string compareTag = "Player";
-    public GameObject coin;
     public ParticleSystem particleSystem;
     public float timeToHide = 3;
     public GameObject graphicItem;
@@ -38,13 +37,12 @@ public class ItemCollectableBase : MonoBehaviour
     }
 
 
-    protected virtual void OnCollect() 
+    protected virtual void OnCollect()
     {
-        if (particleSystem != null) particleSystem.Play;
+        if (particleSystem != null) particleSystem.Play();
         if (audioSource != null) audioSource.Play();
     }
 
 
 }
-
 
