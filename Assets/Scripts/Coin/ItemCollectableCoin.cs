@@ -4,24 +4,33 @@ using UnityEngine;
 
 public class ItemCollectableCoin : ItemCollectableBase
 {
-    public CoinType coinType;
-    
+    public Collider collider;
+    public bool collect = false;
+    public float lerp = 5f;
+    public float miniDistance = 1f;
+
+    protected override void Collect()
+    {
+        base.Collect();
+        collider.enabled = false;
+        collect = true;
+    }
     protected override void OnCollect()
     {
-        base.OnCollect();
-        if (coinType == CoinType.Normal)
-        {
-            ItemManager.instance.AddCoins();
-        }
-        else if (coinType == CoinType.Red)
-        {
-            ItemManager.instance.AddCoinsRed();
-        }
+        OnCollect();
     }
 
-    public enum CoinType
+    private void Update()
     {
-        Normal,
-        Red
+        if (collect)
+        {
+            transform.position = Vector3.Lerp(transform.position, PlayerController.instance.transform.position, lerp * Time.deltaTime);
+
+            if (Vector3.Distance(transform.position, PlayerController.instance.transform.position) < miniDistance)
+            {
+                HideItens();
+                Destroy(gameObject);
+            }
+        }
     }
 }
