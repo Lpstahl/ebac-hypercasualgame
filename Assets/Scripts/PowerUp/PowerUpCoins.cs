@@ -10,7 +10,7 @@ public class PowerUpCoins : POwerUpBase
   protected override void StartPowerUp()
     {
         base.StartPowerUp();
-        PlayerController.instance.ChangeCoinCollectableSize(sizeAmount);
+        PlayerController.instance.ChangeCoinCollectableSize(sizeAmount, powerUpDuration);
         PlayerController.instance.SetPowerUptext("Gotta Catch ’Em All");
     }
 

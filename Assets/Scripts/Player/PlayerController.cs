@@ -31,9 +31,12 @@ public class PlayerController : Singleton<PlayerController>
     private float _currentspeed;
     private Vector3 _startPosition;
 
+    private Vector3 initialCoinCollectorSize;
+
     private void Start()
     {
         _startPosition = transform.position;
+        initialCoinCollectorSize = coinCollector.transform.localScale;
         ResetSpeed();
     }
 
@@ -118,9 +121,16 @@ public class PlayerController : Singleton<PlayerController>
         transform.DOMoveY(_startPosition.y, .1f);
     }
 
-    public void ChangeCoinCollectableSize(float amount)
+    public void ChangeCoinCollectableSize(float amount, float duration)
     {
         coinCollector.transform.localScale = Vector3.one * amount;
+
+        Invoke(nameof(ResetCoinCollectableSize), duration);
+    }
+
+    public void ResetCoinCollectableSize()
+    {
+        coinCollector.transform.localScale = initialCoinCollectorSize;
     }
     #endregion
 }
