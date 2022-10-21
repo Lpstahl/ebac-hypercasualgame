@@ -61,7 +61,7 @@ public class PlayerController : Singleton<PlayerController>
     {
         if (other.transform.tag == tagToCheckEndLine)
         {
-            if(!invencible) EndGame();
+            EndGame();
         }
     }
 

@@ -9,13 +9,13 @@ public class ItemCollectableCoin : ItemCollectableBase
     public float lerp = 5f;
     public float miniDistance = 1f;
 
-    protected override void Collect()
+    protected override void OnCollect()
     {
-        base.Collect();
+        base.OnCollect();
         collider.enabled = false;
         collect = true;
     }
-    protected override void OnCollect()
+    protected override void Collect()
     {
         OnCollect();
     }
