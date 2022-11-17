@@ -1401,7 +1401,7 @@ MonoBehaviour:
   - {fileID: 5906251587365520409, guid: da29d3e909eb41b449ba67f6a176485f, type: 3}
   levelPieceBaseSetups:
   - {fileID: 11400000, guid: 22f1a95b914c7504eb21def4c99edeed, type: 2}
-  - {fileID: 11400000, guid: e2d0da44ae2b7134083b6dbe574578a9, type: 2}
+  - {fileID: 11400000, guid: 42081d34789e00d4abbb1c49e9b75c31, type: 2}
   timeBetweenPIeces: 0.3
   _index: 0
 --- !u!4 &1380130287

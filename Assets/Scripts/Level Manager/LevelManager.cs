@@ -17,9 +17,11 @@ public class LevelManager : MonoBehaviour
     private List<LevelPieceBase> _spawnedPieces = new List<LevelPieceBase>();
     private LevelPieceBaseSetup _currSetup;
 
-    private void Awake() =>
+    private void Awake()
+    {
         //SpawnNextLevel();
         CreateLevelPieces();
+    }
 
     private void SpawnNextLevel()
     {
@@ -47,6 +49,8 @@ public class LevelManager : MonoBehaviour
     private void CreateLevelPieces()
     {
         CleanSpawnedPices();
+
+        _currSetup = levelPieceBaseSetups[Random.Range(0, levelPieceBaseSetups.Count)];
 
         if (_currSetup != null)
         {
