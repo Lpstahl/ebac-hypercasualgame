@@ -20,7 +20,6 @@ public class ArtManager : Singleton<ArtManager>
     {
        return artSetups.Find(i => i.artType == artType);
     }
-
 }
 
 [System.Serializable]
