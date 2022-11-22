@@ -3,16 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ebac.Core.Singleton;
 
-public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
+public class ArtManager : Singleton<ArtManager>
 {
-    private static T instance;
-
-    private void Awake()
-    {
-        if (instance == null)
-            instance = GetComponent<T>();
-    }
-
     public enum ArtType
     {
         TYPE_01,
