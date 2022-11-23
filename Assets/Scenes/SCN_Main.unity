@@ -913,7 +913,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 943492787}
-  m_LocalRotation: {x: 0.1389865, y: -0.06846162, z: 0.009631999, w: 0.987878}
+  m_LocalRotation: {x: 0.13898648, y: -0.06846161, z: 0.009631998, w: 0.987878}
   m_LocalPosition: {x: 1.11, y: 2.21, z: -3.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -998,7 +998,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.1389865, y: -0.06846162, z: 0.009631999, w: 0.987878}
+  m_LocalRotation: {x: 0.13898648, y: -0.06846161, z: 0.009631998, w: 0.987878}
   m_LocalPosition: {x: 1.11, y: 2.21, z: -3.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1421,6 +1421,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89e20167823a30d459856414377997d1, type: 3}
+--- !u!1 &1369556899
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1369556901}
+  - component: {fileID: 1369556900}
+  m_Layer: 0
+  m_Name: CoinsAnimatorManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1369556900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369556899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce8e2716361f5ea43951a940489a8aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itens: []
+  scaleDuration: 0.2
+  scaleTimeBetweenPIeces: 0.01
+  ease: 28
+--- !u!4 &1369556901
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369556899}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.849946, y: -0.042199135, z: 14.167578}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1380130285
 GameObject:
   m_ObjectHideFlags: 0
@@ -1459,6 +1506,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 42081d34789e00d4abbb1c49e9b75c31, type: 2}
   timeBetweenPIeces: 0.3
   _index: 0
+  _spawnedPieces: []
+  scaleDuration: 0.2
+  scaleTimeBetweenPieces: 0.1
+  ease: 27
 --- !u!4 &1380130287
 Transform:
   m_ObjectHideFlags: 0
