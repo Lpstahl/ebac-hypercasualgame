@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7440060349641931769}
   - component: {fileID: 4636368213734436174}
-  - component: {fileID: 321141774012975137}
   - component: {fileID: 7938785474589030077}
   m_Layer: 0
   m_Name: PFB_PowerUpCoinCollector
@@ -47,27 +46,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &321141774012975137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 282018743431375995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0efc1f5472bd27f4da5dbde49824431d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  compareTag: Player
-  particleSystem: {fileID: 0}
-  timeToHide: 3
-  graphicItem: {fileID: 350009002981226821}
-  audioSource: {fileID: 0}
-  powerUpDuration: 4
-  amountHeight: 2
-  animationDuration: 0.1
-  ease: 27
 --- !u!114 &7938785474589030077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,7 +63,7 @@ MonoBehaviour:
   timeToHide: 3
   graphicItem: {fileID: 350009002981226821}
   audioSource: {fileID: 0}
-  powerUpDuration: 0
+  powerUpDuration: 3
   sizeAmount: 7
 --- !u!1 &350009002981226821
 GameObject:
@@ -99,6 +77,7 @@ GameObject:
   - component: {fileID: 2618941407972887762}
   - component: {fileID: 6008841840450030258}
   - component: {fileID: 4473678873860489135}
+  - component: {fileID: 4144266096445350031}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -182,3 +161,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4144266096445350031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350009002981226821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffd1d5e6605748443bc3d6688be08f1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startColor: {r: 1, g: 1, b: 1, a: 1}
+  duration: 1
+  meshRenderer: {fileID: 6008841840450030258}
