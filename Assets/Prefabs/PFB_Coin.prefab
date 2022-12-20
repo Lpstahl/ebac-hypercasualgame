@@ -222,7 +222,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 3b83658ab6741f44cb2de293cd8cf298, type: 2}
     - target: {fileID: 6136798578621966963, guid: a743b2e5c573cb24d9e4da9a41d08d47, type: 3}
       propertyPath: moveWithTransform
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6136798578621966963, guid: a743b2e5c573cb24d9e4da9a41d08d47, type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6136798578621966963, guid: a743b2e5c573cb24d9e4da9a41d08d47, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
